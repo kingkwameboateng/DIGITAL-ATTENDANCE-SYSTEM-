@@ -81,8 +81,7 @@ public:
     }
 };
 
-[span_12](start_span)// Menu-driven program flow (Week 2 Milestone)[span_12](end_span)
-void showMenu() {
+{
     cout << "\n1. Register Student\n2. Create Session\n3. Exit\n";
 }
 void markAttendance(const vector<Student>& students) {
