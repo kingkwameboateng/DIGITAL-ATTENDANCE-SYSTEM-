@@ -96,4 +96,13 @@ void markAttendance(const vector<Student>& students) {
     }
     cout << "Summary: " << p << " Present, " << a << " Absent, " << l << " Late\n";
 }
+#include <fstream>
+
+void saveToFile(const vector<Student>& students) {
+    ofstream outFile("students.txt"); [span_22](start_span)// Requirement 5.4[span_22](end_span)
+    for (const auto& s : students) {
+        outFile << s.indexNumber << "," << s.name << endl;
+    }
+    outFile.close();
+}
 
