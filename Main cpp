@@ -65,4 +65,23 @@ int main() {
             default: std::cout << "Invalid choice. Please try again.\n";
         }
     } while (choice != 3);
-    return 0;
+    return 0
+class AttendanceSession {
+public:
+    string courseCode; [span_11](start_span)// Requirement 5.2[span_11](end_span)
+    string date;
+    string startTime;
+    int duration;
+
+    void setup() {
+        cout << "Course Code: "; cin >> courseCode;
+        cout << "Date (YYYY-MM-DD): "; cin >> date;
+        cout << "Start Time: "; cin >> startTime;
+        cout << "Duration (hrs): "; cin >> duration;
+    }
+};
+
+[span_12](start_span)// Menu-driven program flow (Week 2 Milestone)[span_12](end_span)
+void showMenu() {
+    cout << "\n1. Register Student\n2. Create Session\n3. Exit\n";
+}
