@@ -85,3 +85,16 @@ public:
 void showMenu() {
     cout << "\n1. Register Student\n2. Create Session\n3. Exit\n";
 }
+void markAttendance(const vector<Student>& students) {
+    int p = 0, a = 0, l = 0; [span_16](start_span)// Counters for summary[span_16](end_span)
+    for (const auto& s : students) {
+        int status;
+        cout << s.name << " (1:Present, 2:Absent, 3:Late): ";
+        cin >> status;
+        if(status == 1) p++; 
+        else if(status == 3) l++; 
+        else a++;
+    }
+    cout << "Summary: " << p << " Present, " << a << " Absent, " << l << " Late\n";
+}
+
